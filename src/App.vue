@@ -56,7 +56,7 @@ export default {
   },
   methods: {
     onInput() {
-      const prefix = this.form.prefix.toLowerCase();
+      const prefix = this.form.prefix;
       const labels = this.form.labels.split("");
 
       if (labels.length === 0) {
