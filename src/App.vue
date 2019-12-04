@@ -72,15 +72,15 @@ export default {
         .join("\u200B");
     },
     onCopy() {
-      navigator.clipboard.writeText(this.result).catch(err => {
-        console.error(err);
-      });
-
       if (this.result === initial) {
         this.$toasted.error(initial, toastOpts);
 
         return;
       }
+
+      navigator.clipboard.writeText(this.result).catch(err => {
+        console.error(err);
+      });
 
       this.$toasted.success("コピーしました！", toastOpts);
     }
