@@ -56,7 +56,7 @@ export default {
 
       this.result = labels
         .map(label => {
-          return label.match(/\s/) ? "" : `:${prefix}${label}:`;
+          return label.match(/\s/) ? " " : `:${prefix}${label}:`;
         })
         .join("\u200B");
     },
