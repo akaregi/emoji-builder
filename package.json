@@ -7,6 +7,7 @@
     "parcel-bundler": "^1.12.4",
     "vue": "^2.6.4",
     "vue-hot-reload-api": "^2.3.4",
+    "vue-toasted": "^1.1.27",
     "vuetify": "^2.1.13"
   },
   "devDependencies": {

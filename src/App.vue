@@ -32,6 +32,17 @@
 </template>
 
 <script>
+import Vue from "vue";
+import Toasted from "vue-toasted";
+
+Vue.use(Toasted);
+
+const initial = "接頭辞と語を入力してください";
+const toastOpts = {
+  position: "top-center",
+  duration: 1000
+};
+
 export default {
   data: () => {
     return {
@@ -40,7 +51,7 @@ export default {
         labels: ""
       },
 
-      result: "接頭辞と語を入力してください"
+      result: initial
     };
   },
   methods: {
@@ -49,7 +60,7 @@ export default {
       const labels = this.form.labels.toLowerCase().split("");
 
       if (labels.length === 0) {
-        this.result = "接頭辞と語を入力してください";
+        this.result = initial;
 
         return;
       }
@@ -62,8 +73,16 @@ export default {
     },
     onCopy() {
       navigator.clipboard.writeText(this.result).catch(err => {
-        console.error(err)
-      })
+        console.error(err);
+      });
+
+      if (this.result === initial) {
+        this.$toasted.error(initial, toastOpts);
+
+        return;
+      }
+
+      this.$toasted.success("コピーしました！", toastOpts);
     }
   }
 };
