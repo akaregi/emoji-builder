@@ -14,7 +14,7 @@
     "@vue/component-compiler-utils": "3.2.0",
     "pug": "2.0.4",
     "sass": "1.23.7",
-    "vue-template-compiler": "2.6.10"
+    "vue-template-compiler": "2.6.11"
   },
   "scripts": {
     "dev": "parcel src/index.pug",
