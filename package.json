@@ -8,7 +8,7 @@
     "vue": "^2.6.4",
     "vue-hot-reload-api": "^2.3.4",
     "vue-toasted": "^1.1.27",
-    "vuetify": "^2.1.13"
+    "vuetify": "^2.6.10"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "3.2.0",
